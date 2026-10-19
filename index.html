@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>项目展示 · Sunri 系列与政务服务平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230E9486'/%3E%3Ccircle cx='16' cy='14' r='6' fill='none' stroke='%23ffffff' stroke-width='2.4'/%3E%3Cpath d='M16 4v4M16 20v4M5 14h4M23 14h4M8.4 6.4l2.8 2.8M23.6 6.4l-2.8 2.8' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --bg:#F4F8F6;
+    --card:#FFFFFF;
+    --ink:#16231F;
+    --muted:#5C6B66;
+    --line:#E2ECE8;
+    --accent:#0E9486;
+    --accent-soft:#E4F3F0;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- Hero ---------- */
+  .hero{padding-block:72px 40px}
+  .hero .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:500;color:var(--accent);
+    background:var(--accent-soft);padding:6px 14px;border-radius:999px;
+  }
+  .hero h1{
+    font-family:"Noto Serif SC","Noto Sans SC",serif;
+    font-size:42px;font-weight:700;line-height:1.2;
+    margin:20px 0 14px;letter-spacing:.5px;
+  }
+  .hero p{font-size:16px;color:var(--muted);max-width:620px}
+  .hero .meta{margin-top:22px;font-size:13px;color:var(--muted)}
+
+  /* ---------- Sections ---------- */
+  section{padding:34px 0 10px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+  .sec-head h2{font-size:20px;font-weight:700}
+  .sec-head .en{font-size:13px;color:var(--muted);font-weight:400}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;display:flex;flex-direction:column;
+  }
+  .card-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+  .icon{
+    flex:0 0 46px;width:46px;height:46px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--accent-soft);color:var(--accent);
+  }
+  .icon svg{width:24px;height:24px}
+  .card h3{font-size:19px;font-weight:700;line-height:1.3}
+  .tag{
+    display:inline-block;margin-top:6px;font-size:12px;color:var(--accent);
+    background:var(--accent-soft);padding:2px 9px;border-radius:999px;
+  }
+  .desc{font-size:14.5px;color:var(--muted);flex:1}
+  .stat{
+    margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--bg);
+    border-left:3px solid var(--accent);font-size:13px;color:var(--ink);
+  }
+  .stat b{color:var(--accent);font-weight:700}
+  .stat .cap{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .link{
+    font-size:13px;font-weight:500;color:var(--accent);
+    border:1px solid var(--accent);border-radius:999px;padding:6px 14px;
+    transition:background .15s,color .15s;
+  }
+  .link:hover{background:var(--accent);color:#fff}
+  .link.off{color:var(--muted);border-color:var(--line);cursor:default}
+  .link.off:hover{background:transparent;color:var(--muted)}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:52px;padding-block:26px 40px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  footer .note{margin-top:6px}
+
+  @media (min-width:640px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:900px){
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .hero{padding:88px 0 48px}
+    .hero h1{font-size:50px}
+    .wide{grid-column:1/-1}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <span class="eyebrow">项目展示 · Project Portfolio</span>
+  <h1>Sunri 系列<br>与政务服务平台</h1>
+  <p>这里收录 Sunri 系列智能硬件应用、参与建设的政务服务平台，以及相关应用项目的简介与下载入口。</p>
+  <div class="meta">开发方：杭州寻联网络科技有限公司（寻联科技） · 数据核实截至 2026-10</div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== 品牌应用 ===== -->
+  <section>
+    <div class="sec-head"><h2>品牌应用</h2><span class="en">Sunri Series</span></div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-9.3-9A5 5 0 0 1 12 6.6 5 5 0 0 1 21.3 11C19 15.6 12 20 12 20Z"/></svg></div>
+          <div><h3>Sunri APP</h3><span class="tag">智能健康 · IoT</span></div>
+        </div>
+        <p class="desc">配合智能体脂秤、跳绳等硬件使用的运动健康与体重管理 App，实时记录体重、体围与运动数据，提供科学减脂和健康指导，已接入 DeepSeek-R1 大模型智能体。</p>
+        <div class="stat"><b>524 万+</b> 次累计下载 <span class="cap">vivo 应用商店 · 官方数据</span></div>
+        <div class="links">
+          <a class="link" href="https://apps.apple.com/cn/app/id1535740714" target="_blank" rel="noopener">App Store</a>
+          <a class="link" href="https://detail-browser.vivo.com.cn/v115/index.html?resource=G01&appId=3357654" target="_blank" rel="noopener">vivo 应用商店</a>
+          <a class="link" href="https://apps.microsoft.com/detail/xpdlzmjgvnbl9r" target="_blank" rel="noopener">Microsoft Store</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-.4-9A6 6 0 0 0 5.7 9.5 4 4 0 0 0 6 17.5h11.5Z"/></svg></div>
+          <div><h3>Sunri SaaS</h3><span class="tag">面向厂商 · 云平台</span></div>
+        </div>
+        <p class="desc">面向智能硬件厂商的物联 SaaS 平台与整体解决方案（B 端），帮助传统工厂与品牌快速实现产品的智能化、数据化与多语言出海。无独立 App，通过官网平台接入。</p>
+        <div class="links">
+          <a class="link" href="https://www.findlinked.com/" target="_blank" rel="noopener">平台官网</a>
+          <span class="link off">下载入口待补充</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg></div>
+          <div><h3>Sunri Live 海外版</h3><span class="tag">海外 · 多语言</span></div>
+        </div>
+        <p class="desc">面向海外市场的智能设备管理 App，支持中、英、德、法、意、日及泰、越等多国语言，可连接多品类智能硬件、管理家庭账号，服务全球用户。</p>
+        <div class="links">
+          <a class="link" href="https://apps.apple.com/cn/app/id1630094239" target="_blank" rel="noopener">App Store</a>
+          <a class="link" href="https://play.google.com/store/search?q=Sunri%20Live" target="_blank" rel="noopener">Google Play</a>
+          <a class="link" href="https://www.findlinked.com/apps_all.html" target="_blank" rel="noopener">官网下载页</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 政务服务平台 ===== -->
+  <section>
+    <div class="sec-head"><h2>政务服务平台</h2><span class="en">Public Services</span></div>
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div><h3>全国 12315 平台</h3><span class="tag">政务 · 市场监管</span></div>
+        </div>
+        <p class="desc">国家市场监督管理总局消费者权益保护官方平台，提供消费投诉、举报与在线调解等服务。</p>
+        <div class="stat"><b>1.1 亿+</b> 人次累计访问 · <b>8611 万+</b> 件接收诉求 <span class="cap">平台官网 · 官方累计数据</span></div>
+        <div class="links">
+          <a class="link" href="https://www.12315.cn/" target="_blank" rel="noopener">12315 官网</a>
+          <span class="link off">App / 微信小程序 / 支付宝搜“12315”</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+          <div><h3>12366 纳税服务</h3><span class="tag">政务 · 税务</span></div>
+        </div>
+        <p class="desc">国家税务总局官方纳税服务平台，提供智能咨询、网上留言、在线咨询、纳税人学堂与网上办税等服务。</p>
+        <div class="links">
+          <a class="link" href="https://12366.chinatax.gov.cn/" target="_blank" rel="noopener">12366 官网</a>
+          <a class="link" href="https://12366.chinatax.gov.cn/download/app/index" target="_blank" rel="noopener">官方 App</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 2h6"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 17h6"/></svg></div>
+          <div><h3>成都人社机器人</h3><span class="tag">政务 · 智能客服</span></div>
+        </div>
+        <p class="desc">成都人社 12333 智能客服机器人，依托 12333 智能问答库，通过“成都人社局”政务微信与实体机器人提供 7×24 小时智能咨询服务。</p>
+        <div class="stat"><b>65 万人</b> 累计智能咨询 · <b>275 万条</b> 总咨询量 <span class="cap">人社部 / 四川省人社厅 · 官方公布</span></div>
+        <div class="links">
+          <a class="link" href="https://cdhrss.chengdu.gov.cn/" target="_blank" rel="noopener">成都市人社局</a>
+          <span class="link off">12333 热线 / “成都人社局”微信</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== 其他应用 ===== -->
+  <section>
+    <div class="sec-head"><h2>其他应用</h2><span class="en">More</span></div>
+    <div class="grid">
+      <article class="card wide">
+        <div class="card-top">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div>
+          <div><h3>IOCDOC APP</h3><span class="tag">待补充</span></div>
+        </div>
+        <p class="desc">公开应用市场暂未检索到该产品信息，简介与下载入口待补充。</p>
+        <div class="links"><span class="link off">下载入口待补充</span></div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div>开发方：杭州寻联网络科技有限公司（寻联科技） · <a href="https://www.findlinked.com/" style="color:var(--accent)">findlinked.com</a></div>
+  <div class="note">政务平台为官方公共服务，非商业产品；各平台日活数据未对外公开，本页仅展示官方公布的累计规模数据。标注“待补充”的信息欢迎联系补充。</div>
+</footer>
+
+</body>
+</html>
